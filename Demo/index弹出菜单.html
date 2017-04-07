@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title>弹出菜单</title>
+	    <script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <script type="text/javascript" charset="utf-8">
+	      	mui.init();
+	    </script>
+	</head>
+	<body>
+		<style type="text/css">
+		#popover{
+			height: 250px;
+			width:100%;
+		}
+		</style>
+		<!--mui框架内置了弹出菜单插件，弹出菜单显示内容不限，但必须包裹在一个含.mui-popover类的div中-->
+		<div id="popover" class="mui-popover">
+			<div class="mui-scroll-wrapper">
+			    <div class="mui-scroll">
+				    <ul class="mui-table-view">
+				    	<li class="mui-table-view-cell"><a href="#">Item1</a></li>
+				    	<li class="mui-table-view-cell"><a href="#">Item2</a></li>
+				    	<li class="mui-table-view-cell"><a href="#">Item3</a></li>
+				    	<li class="mui-table-view-cell"><a href="#">Item4</a></li>
+				    	<li class="mui-table-view-cell"><a href="#">Item5</a></li>
+				    </ul>
+				</div>
+			</div>
+		</div>
+		<!--要显示、隐藏如上菜单，mui推荐使用锚点方式-->
+		<a href="#popover" id="openPopover" class="mui-btn mui-btn-primary mui-btn-block">打开弹出菜单</a>
+	</body>
+</html>

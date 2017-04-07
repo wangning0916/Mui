@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title>列表</title>
+	    <script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <script type="text/javascript" charset="utf-8">
+	      	mui.init();
+	    </script>
+	    <style>
+	    	/*点击高亮*/
+	    	.mui-table-view-cell>a:not(.mui-btn).mui-active{
+				background-color: #ff0000;
+			}
+	    </style>
+	</head>
+	<body>
+		<div class="mui-content">
+			<!--普通列表 -->
+			<!--列表是常用的UI控件，mui封装的列表组件比较简单，只需要在ul节点上添加.mui-table-view类、在li节点上添加.mui-table-view-cell类即可-->
+			<!--若右侧需要增加导航箭头，变成导航链接，则只需在li节点下增加a子节点，并为该a节点增加.mui-navigate-right类即可-->
+		    <ul class="mui-table-view">
+	            <li class="mui-table-view-cell">
+	                <a class="mui-navigate-right">
+	                    Item 1
+	                </a>
+	            </li>
+	            <li class="mui-table-view-cell">
+	                <a class="mui-navigate-right">
+	                     Item 2
+	                </a>
+	            </li>
+	            <li class="mui-table-view-cell">
+	                <a class="mui-navigate-right">
+	                     Item 3
+	                </a>
+	            </li>
+	        </ul>
+	        
+            <!--图文列表-->
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell">
+                    <a>
+                        <img class="mui-media-object mui-pull-left" src="images/shuijiao.jpg">
+			            <div class="mui-media-body">
+			               	 幸福
+			                <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+			            </div>
+                    </a>
+                </li>
+                <li class="mui-table-view-cell">
+                    <a>
+                        <img class="mui-media-object mui-pull-left" src="images/shuijiao.jpg">
+			            <div class="mui-media-body">
+			               	 幸福
+			                <p class='mui-ellipsis'>能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+			            </div>
+                    </a>
+                </li>
+            </ul>
+            
+            <!--激活字符 mlist-->
+		</div>
+	</body>
+</html>

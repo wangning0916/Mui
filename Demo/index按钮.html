@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title>按钮</title>
+	    <script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <script type="text/javascript" charset="utf-8">
+	      	mui.init();
+	    </script>
+	</head>
+	<body>
+		<!--有底色-->
+		<!--颜色-->
+		<button type="button" class="mui-btn mui-btn-blue">按钮</button>
+		<button type="button" class="mui-btn mui-btn-green">按钮</button>
+		<button type="button" class="mui-btn mui-btn-yellow">按钮</button>
+		<button type="button" class="mui-btn mui-btn-red">按钮</button>
+		<button type="button" class="mui-btn mui-btn-purple">按钮</button>
+		<button type="button" class="mui-btn mui-btn-grey">按钮</button>
+		
+		<!--场景-->
+		<button type="button" class="mui-btn mui-btn-primary">按钮</button>
+		<button type="button" class="mui-btn mui-btn-success">按钮</button>
+		<button type="button" class="mui-btn mui-btn-warning">按钮</button>
+		<button type="button" class="mui-btn mui-btn-danger">按钮</button>
+		<button type="button" class="mui-btn mui-btn-royal">按钮</button>
+		
+		<!--无底色-->
+		<button type="button" class="mui-btn mui-btn-blue mui-btn-outlined">按钮</button>
+		<button type="button" class="mui-btn mui-btn-green mui-btn-outlined">按钮</button>
+		<button type="button" class="mui-btn mui-btn-yellow mui-btn-outlined">按钮</button>
+		<button type="button" class="mui-btn mui-btn-red mui-btn-outlined">按钮</button>
+		<button type="button" class="mui-btn mui-btn-purple mui-btn-outlined">按钮</button>
+		<button type="button" class="mui-btn mui-btn-outlined">按钮</button>
+		
+		<!--加载中  三个属性-->
+		<button type="button" data-loading-icon="mui-spinner mui-spinner-custom" class="mui-btn mui-btn-success">确认</button>
+		<button type="button" data-loading-text="提交中" class="mui-btn mui-btn-success">确认</button>
+		<button type="button" data-loading-icon-position="right" class="mui-btn">确认</button>
+		
+		<!--切换 loading和reset状态-->
+		<script type="text/javascript">
+			mui(document.body).on('tap', '.mui-btn', function(e) {
+			    mui(this).button('loading');
+			    setTimeout(function() {
+			        mui(this).button('reset');
+			    }.bind(this), 2000);
+			});
+		</script>
+
+		<!--mui默认按钮为灰色，另外还提供了蓝色（blue）、绿色(green)、黄色(yellow)、红色(red)、紫色(purple)五种色系的按钮，五种色系对应五种场景，分别为primary、success、warning、danger、royal；使用.mui-btn类即可生成一个默认按钮，继续添加.mui-btn-颜色值或.mui-btn-场景可生成对应色系的按钮，例如：通过.mui-btn-blue或.mui-btn-primary均可生成蓝色按钮；-->
+	</body>
+</html>

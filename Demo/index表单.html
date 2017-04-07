@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <title>表单</title>
+	    <script src="js/mui.min.js"></script>
+	    <link href="css/mui.min.css" rel="stylesheet"/>
+	    <script type="text/javascript" charset="utf-8">
+	      	mui.init();
+	    </script>
+	</head>
+	<body>
+		<!--复选框 激活字符mcheckbox-->
+		<!--默认checkbox在右侧显示，若希望在左侧显示，只需增加.mui-left类即可-->
+		<!--若要禁用checkbox，只需在checkbox上增加disabled属性即可-->
+		<div class="mui-input-row mui-checkbox mui-left">
+		  <label>复选框</label>
+		  <input name="checkbox1" type="checkbox" checked >
+		</div>
+		<div class="mui-input-row mui-checkbox ">
+		    <label>复选框</label>
+		    <input name="Checkbox" type="checkbox">
+		</div>
+		<div class="mui-input-row mui-checkbox ">
+		    <label>复选框</label>
+		    <input name="Checkbox" type="checkbox" disabled>
+		</div>
+		
+		<!--单选框 激活字符mradio-->
+		<!--默认radio在右侧显示，若希望在左侧显示，只需增加.mui-left类即可-->
+		<!--若要禁用radio，只需在radio上增加disabled属性即可；-->
+		<div class="mui-input-row mui-radio mui-left">
+		    <label>单选框</label>
+		    <input name="radio" type="radio" checked>
+		</div>
+		<div class="mui-input-row mui-radio ">
+		    <label>单选框</label>
+		    <input name="radio" type="radio" checked>
+		</div>
+		<div class="mui-input-row mui-radio ">
+		    <label>单选框</label>
+		    <input name="radio" type="radio" disabled>
+		</div>
+		<!--列表单选 在列表根节点上增加.mui-table-view-radio类即可 若要默认选中某项，只需要在对应li节点上增加.mui-selected类即可-->
+		<ul class="mui-table-view mui-table-view-radio">
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">Item 1</a>
+			</li>
+			<li class="mui-table-view-cell mui-selected">
+				<a class="mui-navigate-right">Item 2</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">Item 3</a>
+			</li>
+		</ul>
+		<!--列表式单选在切换选中项时会触发selected事件，在事件参数（e.detail.el）中可以获得当前选中的dom节点-->
+		<script>
+			var list = document.querySelector('.mui-table-view.mui-table-view-radio');
+			list.addEventListener('selected',function(e){
+				console.log("当前选中的为："+e.detail.el.innerText);
+			});
+		</script>
+		<br />
+		
+		
+		<!--输入表单-->
+		<div class="mui-input-group">
+			<div class="mui-input-row">
+			    <label>用户名</label>
+			    <input type="text" placeholder="普通输入框">
+			</div>
+			<div class="mui-input-row">
+			    <label>密码</label>
+			    <input type="password" placeholder="普通输入框">
+			</div>
+			
+			<div class="mui-button-row">
+				<button type="button" class="mui-btn mui-btn-blue">按钮</button>
+				<button type="button" class="mui-btn mui-btn-red">取消</button>
+			</div>
+		</div>
+		<br />
+		<!--快速删除  只需要在input控件上添加.mui-input-clear类，当input 控件中有内容时，右侧会有一个删除图标，点击会清空当前input的内容；-->
+		<div class="mui-input-group">
+			<div class="mui-input-row">
+			    <label>快速删除</label>
+			    <input type="text" class="mui-input-clear" placeholder="普通输入框">
+			</div>
+		</div>
+		<br />
+		<!--搜索框  在.mui-input-row同级添加.mui-input-search 类-->
+		<div class="mui-input-row mui-search">
+		    <input type="search" class="mui-input-clear" placeholder="">
+		</div>
+		<!--密码框-->
+		<div class="mui-input-group">
+			<div class="mui-input-row">
+			    <label>密码</label>
+			    <input type="password" class="mui-input-password" placeholder="普通输入框">
+			</div>
+		</div>
+	</body>
+</html>
